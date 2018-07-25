@@ -14,7 +14,7 @@ namespace HangmanSimilarGame
             do
             {
                 string[] words = { "one", "two", "three", "four", "six", "seven", "eight", "nine" };
-                Console.WriteLine("Welcome to Hangman-similar game, guess the world (number from 1 to 9) by typing the letters.");
+                Console.WriteLine("Welcome to Hangman-similar game, guess the world (a number from 1 to 9) by typing the letters.");
 
                 Random random = new Random();
                 int randomIndex = random.Next(0, 8);
@@ -59,10 +59,10 @@ namespace HangmanSimilarGame
                 }
                 Console.WriteLine("Congratulations!!! You win :) the world was {0}", selectedWord);
                 Console.WriteLine("You guessed {0} times", amountOfGuesses);
-                Console.WriteLine("Would you like to play again? :) Type T to start over or any other sign to quit");
+                Console.WriteLine("Would you like to play again? :) Type Y or y to start over or any other sign to quit");
                 answer = Console.ReadLine();
                 Console.ReadKey();
-            } while (answer == "T");
+            } while (answer.ToLower() == "y");
         }
     }
 }
